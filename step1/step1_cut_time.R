@@ -1,0 +1,28 @@
+library(dplyr)
+library(lubridate)
+print(getwd())
+setwd("D:/Personal/study/CS/PythonSeminar/github/DS3/step1")
+df <- read.csv("entsoe_de_cleanstep3.csv")
+# Step 2: Set time range
+beforetrain_start <- ymd("2018-01-01")
+beforetrain_end   <- ymd("2018-12-31")
+train_start <- ymd("2019-01-01")
+train_end   <- ymd("2021-12-31")
+valid_start <- ymd("2022-01-01")
+valid_end   <- ymd("2022-12-31")
+test_start  <- ymd("2023-01-01")
+test_end    <- ymd("2025-05-31")
+# Step 3: Split the dataset
+beforetrain_df <- df %>% filter(date >= beforetrain_start & date <= beforetrain_end)
+train_df <- df %>% filter(date >= train_start & date <= train_end)
+valid_df <- df %>% filter(date >= valid_start & date <= valid_end)
+test_df  <- df %>% filter(date >= test_start  & date <= test_end)
+# Check if the split is correct
+cat("Training set:", min(train_df$date), "to", max(train_df$date), "\n")
+cat("Validation set:", min(valid_df$date), "to", max(valid_df$date), "\n")
+cat("Test set:", min(test_df$date), "to", max(test_df$date), "\n")
+write.csv(beforetrain_df, "D:/Personal/study/CS/PythonSeminar/github/DS3/d/1train/time_beforetrain_df.csv", row.names = FALSE)
+write.csv(train_df, "D:/Personal/study/CS/PythonSeminar/github/DS3/d/1train/time_train_df.csv", row.names = FALSE)
+write.csv(valid_df, "D:/Personal/study/CS/PythonSeminar/github/DS3/d/2valid/time__step1_valid_df.csv", row.names = FALSE)
+write.csv(test_df, "D:/Personal/study/CS/PythonSeminar/github/DS3/d/3test/time__step1_test_df.csv", row.names = FALSE)
+
