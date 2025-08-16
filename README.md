@@ -1,5 +1,6 @@
 # Probabilistic Day-Ahead Electricity Price Forecasting in Germany
-
+## ✨ Author
+- **Jueyuan Liu** – MSc Student,Econometrics in TU Dortmund
 ## 📌 Project Overview
 This project develops and evaluates **probabilistic day-ahead electricity price forecasts** for the German market.  
 The study employs three core modeling approaches:
@@ -50,43 +51,6 @@ Germany’s day-ahead market, with its high share of renewables, requires **prob
 
 ---
 
-## 📁 Repository Structure
-```
-├── data/                # Raw & processed datasets (links or scripts)
-├── notebooks/           # Jupyter notebooks for data cleaning & analysis
-├── models/              # ARX, MARX, QRA implementations
-├── results/             # Forecast outputs, plots, evaluation metrics
-└── README.md            # Project description
-```
-
----
-
-## 🚀 How to Use
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/your-username/electricity-price-forecasting.git
-   cd electricity-price-forecasting
-   ```
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Run preprocessing:
-   ```bash
-   python scripts/preprocess.py
-   ```
-4. Train models:
-   ```bash
-   python scripts/train_arx.py
-   python scripts/train_marx.py
-   python scripts/train_qra.py
-   ```
-5. Evaluate forecasts:
-   ```bash
-   python scripts/evaluate.py
-   ```
-
----
 
 ## 📖 References
 - Weron, R. (2014). *Electricity price forecasting: A review of the state-of-the-art.*  
@@ -95,5 +59,4 @@ Germany’s day-ahead market, with its high share of renewables, requires **prob
 
 ---
 
-## ✨ Author
-- **Jueyuan Liu** – MSc Student,Econometrics in TU Dortmund
+
